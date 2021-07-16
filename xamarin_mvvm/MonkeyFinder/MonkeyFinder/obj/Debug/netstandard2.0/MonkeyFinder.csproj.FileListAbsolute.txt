@@ -1,0 +1,15 @@
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\bin\Debug\netstandard2.0\MonkeyFinder.deps.json
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\bin\Debug\netstandard2.0\MonkeyFinder.dll
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\bin\Debug\netstandard2.0\ref\MonkeyFinder.dll
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\bin\Debug\netstandard2.0\MonkeyFinder.pdb
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\obj\Debug\netstandard2.0\View\DetailsPage.xaml.g.cs
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\obj\Debug\netstandard2.0\View\MainPage.xaml.g.cs
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\obj\Debug\netstandard2.0\MonkeyFinder.AssemblyInfoInputs.cache
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\obj\Debug\netstandard2.0\MonkeyFinder.AssemblyInfo.cs
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\obj\Debug\netstandard2.0\MonkeyFinder.csproj.CoreCompileInputs.cache
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\obj\Debug\netstandard2.0\XamlC.stamp
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\obj\Debug\netstandard2.0\MonkeyFinder.dll
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\obj\Debug\netstandard2.0\ref\MonkeyFinder.dll
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\obj\Debug\netstandard2.0\MonkeyFinder.pdb
+D:\xamarin\xamarin_mvvm\MonkeyFinder\MonkeyFinder\obj\Debug\netstandard2.0\MonkeyFinder.csproj.AssemblyReference.cache

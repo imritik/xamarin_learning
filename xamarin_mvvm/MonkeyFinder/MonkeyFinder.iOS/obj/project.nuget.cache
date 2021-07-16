@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "PoUYZqyrIt+aW2aPEcUpvA8y4WIAkiwMSF17/idWDDzj60FanjZA7F0duMIyVI2X1Eri7d7QqAlZNwMJMc9tRQ==",
+  "success": true,
+  "projectFilePath": "D:\\xamarin\\xamarin_mvvm\\MonkeyFinder\\MonkeyFinder.iOS\\MonkeyFinder.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\riverma\\.nuget\\packages\\microsoft.appcenter\\3.4.3\\microsoft.appcenter.3.4.3.nupkg.sha512",
+    "C:\\Users\\riverma\\.nuget\\packages\\microsoft.appcenter.analytics\\3.4.3\\microsoft.appcenter.analytics.3.4.3.nupkg.sha512",
+    "C:\\Users\\riverma\\.nuget\\packages\\microsoft.appcenter.crashes\\3.4.3\\microsoft.appcenter.crashes.3.4.3.nupkg.sha512",
+    "C:\\Users\\riverma\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\riverma\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\riverma\\.nuget\\packages\\xamarin.forms\\5.0.0.2083\\xamarin.forms.5.0.0.2083.nupkg.sha512",
+    "C:\\Users\\riverma\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2083\\xamarin.forms.visual.material.5.0.0.2083.nupkg.sha512",
+    "C:\\Users\\riverma\\.nuget\\packages\\xamarin.ios.materialcomponents\\92.0.0\\xamarin.ios.materialcomponents.92.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
