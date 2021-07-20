@@ -1,0 +1,8 @@
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.iOS\obj\iPhone\Debug\optimized\
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.iOS\obj\iPhone\Debug\xamarin_notes_app.iOS.csproj.AssemblyReference.cache
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.iOS\obj\iPhone\Debug\xamarin_notes_app.iOS.csproj.CoreCompileInputs.cache

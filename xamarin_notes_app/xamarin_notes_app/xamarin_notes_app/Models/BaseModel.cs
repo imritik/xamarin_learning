@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace xamarin_notes_app.Models
+{
+   public class BaseModel
+    {
+       
+        public int Id { set; get; }
+    }
+}

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:xamarin_notes_app.ViewModels" x:DataType="viewmodels:ProfileViewModel"
+             x:Class="xamarin_notes_app.Views.ProfilePage"
+             xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             >
+    <NavigationPage.TitleView>
+        <Label Text="{StaticResource ProfileScreenTitle}" FontSize="30" TextColor="White" />
+    </NavigationPage.TitleView>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TaskCountStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="20"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="38" />
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator x:Name="activity"  
+                               IsRunning="{Binding IsLoading}"    
+                               IsVisible="{Binding IsLoading}"  
+                               Color="Blue"  
+                               BackgroundColor="Transparent"/>
+            <BoxView
+                HeightRequest="60">
+            </BoxView>
+            <ic:CircleImage   
+                WidthRequest="180"  
+                HeightRequest="180"  
+                Aspect="AspectFill"  
+                Source="{Binding ProfileData.imageURL}"  
+                VerticalOptions="Center"  
+                HorizontalOptions="Center"  
+                ></ic:CircleImage>
+          
+            <Label Text="{Binding ProfileData.name}"
+                   Padding="30"
+                   Style="{StaticResource userNameText}"
+                   />
+            <Label Text="{StaticResource TaskCountLabel}"
+                   HorizontalOptions="Center"
+                   FontSize="Large"  
+                   />
+            <Label Text="{Binding ProfileData.taskCount}"
+                   Style="{StaticResource TaskCountStyle}"     
+                   />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,9 @@
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\xamarin_notes_app.csproj.AssemblyReference.cache
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\Views\AddNewTask.xaml.g.cs
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\Views\ProfilePage.xaml.g.cs
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\Views\TabBarPage.xaml.g.cs
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\Views\TaskPage.xaml.g.cs
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\xamarin_notes_app.AssemblyInfoInputs.cache
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\xamarin_notes_app.AssemblyInfo.cs
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\xamarin_notes_app.csproj.CoreCompileInputs.cache

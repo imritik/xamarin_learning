@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "z0ZidtgPnSWLvHmKDcN65XiQvQtjJCD2wf7W5TZM42u+ALHZF+xn8/nDeFcGjT7s9nT8e6+ChcOBnJEC+hH7Pg==",
+  "success": true,
+  "projectFilePath": "D:\\xamarin\\xamarin_notes_app\\xamarin_notes_app\\xamarin_notes_app\\xamarin_notes_app.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\riverma\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\riverma\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\riverma\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\riverma\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\riverma\\.nuget\\packages\\xam.plugins.forms.imagecircle\\3.0.0.5\\xam.plugins.forms.imagecircle.3.0.0.5.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}
