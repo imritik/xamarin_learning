@@ -1,7 +1,6 @@
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\MonoAndroid,Version=v11.0.AssemblyAttributes.cs
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\build.props
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\adb.props
-D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\xamarin_notes_app.Android.csproj.AssemblyReference.cache
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\stamp\_BuildLibraryImportsCache.stamp
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\res.flag
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\lp\45\jl\files.cache

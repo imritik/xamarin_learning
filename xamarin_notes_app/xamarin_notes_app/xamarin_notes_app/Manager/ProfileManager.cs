@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using xamarin_notes_app.Helper;
 using xamarin_notes_app.Models;
 using xamarin_notes_app.Store;
 
@@ -11,7 +12,7 @@ namespace xamarin_notes_app.Manager
     {
         public static async Task<ProfileModel> GetProfileDataAsync()
         {
-            var data = await ProfileStore.GetProfileFromDBAsync();
+            var data = await ProfileStore.GetProfileDataAsync(Constants.getProfileUrl);
                 return data;  
         }
     }

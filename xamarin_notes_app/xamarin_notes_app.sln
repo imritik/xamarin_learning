@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarin_notes_app.Android",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarin_notes_app.iOS", "xamarin_notes_app\xamarin_notes_app.iOS\xamarin_notes_app.iOS.csproj", "{02E79A79-DD16-44A4-A08E-DD598FDE0DF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarin_notes_app", "xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.csproj", "{EDDFA87C-58FD-4CA1-BFB2-F49AF32D5BE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xamarin_notes_app", "xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.csproj", "{EDDFA87C-58FD-4CA1-BFB2-F49AF32D5BE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
