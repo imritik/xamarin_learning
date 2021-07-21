@@ -14,36 +14,18 @@ namespace xamarin_notes_app.Store
         {
             try
             {
-
-               /* string json = null;
-                var a = System.Reflection.Assembly.GetExecutingAssembly();
-                using (var resFilestream = a.GetManifestResourceStream("xamarin_notes_app.profileData.json"))
-                {
-                    using (var reader = new System.IO.StreamReader(resFilestream))
-                        json = await reader.ReadToEndAsync();
-                }*/
-
                 string response = await RestServices.GetDataAsync(url);
                 if (response != null)
                 {
-                    try
-                    {
                         var profile = JsonConvert.DeserializeObject<ProfileModel>(response);
                         return profile;
-                    }
-                    catch(Exception e)
-                    {
-                        Console.WriteLine(e.Message);
-                        return null;
-                    }
+
                 }
                 else
                 {
-                    Console.WriteLine("Profile Store:Failed to get tasks");
+                    Console.WriteLine("Profile Store:Failed to get profile");
                     return null;
                 }
-
-          
 
             }
             catch (Exception e)

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rS+UWshUCLa+K6ZfeiomYsqM7MRre0QiG9XSGs5XGy+5rOgRybPpXlek3rzAvXGQFp+vmGNgFtvA/M5U+oTISA==",
+  "dgSpecHash": "JRqCh8u6e6yP/CMaFtpTaq+bGOSID51b8uSO5bfYFOvXfCWZ1oZnzUya2il8U+flSD8rHZMKRx4YJSH/0YbucA==",
   "success": true,
   "projectFilePath": "D:\\xamarin\\xamarin_notes_app\\xamarin_notes_app\\xamarin_notes_app.iOS\\xamarin_notes_app.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\riverma\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\riverma\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\riverma\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\riverma\\.nuget\\packages\\xam.plugins.forms.imagecircle\\3.0.0.5\\xam.plugins.forms.imagecircle.3.0.0.5.nupkg.sha512",

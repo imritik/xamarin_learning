@@ -1,3 +1,7 @@
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\bin\Debug\netstandard2.0\xamarin_notes_app.deps.json
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\bin\Debug\netstandard2.0\xamarin_notes_app.dll
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\bin\Debug\netstandard2.0\ref\xamarin_notes_app.dll
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\bin\Debug\netstandard2.0\xamarin_notes_app.pdb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\App.xaml.g.cs
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\Views\AddNewTask.xaml.g.cs
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\Views\ProfilePage.xaml.g.cs
@@ -6,3 +10,7 @@ D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netst
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\xamarin_notes_app.AssemblyInfoInputs.cache
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\xamarin_notes_app.AssemblyInfo.cs
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\xamarin_notes_app.csproj.CoreCompileInputs.cache
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\XamlC.stamp
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\xamarin_notes_app.dll
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\ref\xamarin_notes_app.dll
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\xamarin_notes_app.pdb

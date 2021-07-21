@@ -13,7 +13,7 @@
             >
     <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
-        <NavigationPage Title="Task" IconImageSource="list.png">
+        <NavigationPage Title="Tasks" IconImageSource="list.png">
             <x:Arguments>
                 <views:TaskPage/>
             </x:Arguments>

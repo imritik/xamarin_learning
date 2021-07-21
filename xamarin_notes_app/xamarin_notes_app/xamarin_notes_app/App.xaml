@@ -6,8 +6,8 @@
         <x:String x:Key="ProfileScreenTitle">Profile</x:String>
         <x:String x:Key="AddTaskScreenTitle">New Task</x:String>
         <x:String x:Key="AllTaskScreenTitle">All Tasks</x:String>
-        <x:String x:Key="ProfileScreenTitle">Profile</x:String>
         <x:String x:Key="TaskCountLabel">Total Task Logged</x:String>
+        <x:String x:Key="NoTaskFound">No Tasks</x:String>
         <ResourceDictionary>
             
             <Style x:Key="userNameText" TargetType="Label">

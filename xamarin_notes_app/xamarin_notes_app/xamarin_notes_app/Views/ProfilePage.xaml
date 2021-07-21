@@ -21,35 +21,40 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout>
+        <Grid>
+            <StackLayout>
+                <BoxView
+                    HeightRequest="50">
+                </BoxView>
+                <ic:CircleImage   
+                    WidthRequest="180"  
+                    HeightRequest="180"  
+                    Aspect="AspectFill"  
+                    Source="{Binding ProfileData.imageURL}"  
+                    VerticalOptions="Center"  
+                    HorizontalOptions="Center"  
+                    ></ic:CircleImage>
+
+                <Label Text="{Binding ProfileData.name}"
+                       Padding="30"
+                       Style="{StaticResource userNameText}"
+                       />
+                <Label Text="{StaticResource TaskCountLabel}"
+                       HorizontalOptions="Center"
+                       FontSize="Large"  
+                       />
+                <Label Text="{Binding ProfileData.taskCount}"
+                       Style="{StaticResource TaskCountStyle}"     
+                       />
+            </StackLayout>
             <ActivityIndicator x:Name="activity"  
                                IsRunning="{Binding IsLoading}"    
                                IsVisible="{Binding IsLoading}"  
                                Color="Blue"  
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
                                BackgroundColor="Transparent"/>
-            <BoxView
-                HeightRequest="60">
-            </BoxView>
-            <ic:CircleImage   
-                WidthRequest="180"  
-                HeightRequest="180"  
-                Aspect="AspectFill"  
-                Source="{Binding ProfileData.imageURL}"  
-                VerticalOptions="Center"  
-                HorizontalOptions="Center"  
-                ></ic:CircleImage>
-          
-            <Label Text="{Binding ProfileData.name}"
-                   Padding="30"
-                   Style="{StaticResource userNameText}"
-                   />
-            <Label Text="{StaticResource TaskCountLabel}"
-                   HorizontalOptions="Center"
-                   FontSize="Large"  
-                   />
-            <Label Text="{Binding ProfileData.taskCount}"
-                   Style="{StaticResource TaskCountStyle}"     
-                   />
-        </StackLayout>
+        </Grid>
+        
     </ContentPage.Content>
 </ContentPage>
