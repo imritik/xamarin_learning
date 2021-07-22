@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Xamarin.Forms;
@@ -13,7 +14,7 @@ namespace xamarin_notes_app.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public List<TaskData> source;
+        public static List<TaskData> source;
 
         public ObservableCollection<TaskData> AllTask { get; private set; }
         public BaseViewModel()
@@ -41,6 +42,10 @@ namespace xamarin_notes_app.ViewModels
             try
             {
                 source = await TaskListManager.GetTasksAsync();
+                foreach (TaskData task in source)
+                {
+                    task.creationDate = DateTime.ParseExact(task.date, "dd/MM/yyyy", null);
+                }
 
             }
             catch (Exception e)
@@ -49,9 +54,10 @@ namespace xamarin_notes_app.ViewModels
             }
             if (source != null)
             {
-                AllTask = new ObservableCollection<TaskData>(source);
+                List<TaskData> sortedList = source.OrderByDescending(s => s.creationDate).ToList();
+                AllTask = new ObservableCollection<TaskData>(sortedList);
                 OnPropertyChanged(nameof(AllTask));
-                /*source = null;*/
+                OnPropertyChanged(nameof(source));
                 IsLoading = false;
             }
         }

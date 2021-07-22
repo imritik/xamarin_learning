@@ -9,6 +9,7 @@ namespace xamarin_notes_app.Models
         public string title { get; set; }
         public string description { get; set; }
         public string date { get; set; }
+        public DateTime creationDate { get; set; }
 
         public TaskData(string Title,string Description,string Date)
         {

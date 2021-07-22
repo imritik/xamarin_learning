@@ -43,7 +43,7 @@
                        HorizontalOptions="Center"
                        FontSize="Large"  
                        />
-                <Label Text="{Binding taskCount}"
+                <Label Text="{Binding AllTask.Count}"
                        Style="{StaticResource TaskCountStyle}"     
                        />
             </StackLayout>

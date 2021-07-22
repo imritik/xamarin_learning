@@ -41,14 +41,16 @@ namespace xamarin_notes_app.Services
             try
             {
                 var data = JsonConvert.SerializeObject(content);
-                HttpResponseMessage response = await _client.PutAsync(url,data);
+                var reqObj = new StringContent(data, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = await _client.PutAsync(url, reqObj);
                 if (response.IsSuccessStatusCode)
                 {
-                    return Strings.taskAddSuccess;
+                    return await response.Content.ReadAsStringAsync();
                 }
                 else
                 {
-                    return Strings.taskAddFailure;
+                    return null;
                 }
             }
             catch(Exception e)

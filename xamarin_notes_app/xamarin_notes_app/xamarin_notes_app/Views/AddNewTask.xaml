@@ -33,7 +33,7 @@
                     Text="{StaticResource EnterDescription}"
                     Style="{StaticResource LabelTextStyle}"
                     />
-                <customRenderer:CustomEntry  x:Name="Description" VerticalOptions="Start"
+                <customRenderer:CustomEntry  x:Name="Description"
                                              Text="{Binding Description,Mode=TwoWay}" HeightRequest="100" Placeholder="Enter description of task" Margin="0,5" />
                 <Button x:Name="taskSubmitBtn"
                         BackgroundColor="Teal"

@@ -36,7 +36,9 @@ namespace xamarin_notes_app.Store
         }
 
         public static async Task<List<TaskData>> AddTaskAsync(string url,TaskList tasks)
+
         {
+            Console.WriteLine("in store==" + tasks.tasks.Count);
             try
             {
                 string response = await RestServices.PutDataAsync(url, tasks);

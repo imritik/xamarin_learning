@@ -15,7 +15,7 @@ namespace xamarin_notes_app.ViewModels
 
         public ProfileModel ProfileData { get; set; }
 
-        public int taskCount = 0;
+     /*   public int taskCount ;*/
        
         public ProfileViewModel()
         {
@@ -30,8 +30,7 @@ namespace xamarin_notes_app.ViewModels
             {
                 profileData = await ProfileManager.GetProfileDataAsync();
                 GetAllTask();
-                taskCount = source.Count;
-              
+
             }
             catch (Exception e)
             {
@@ -44,8 +43,6 @@ namespace xamarin_notes_app.ViewModels
             }
             ProfileData = profileData;
             OnPropertyChanged(nameof(ProfileData));
-            OnPropertyChanged(nameof(taskCount));
-
              IsLoading = false;
         }
  
