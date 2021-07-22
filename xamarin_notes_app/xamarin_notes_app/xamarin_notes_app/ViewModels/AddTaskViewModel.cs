@@ -13,8 +13,8 @@ namespace xamarin_notes_app.ViewModels
     {
         public TaskData addTaskData;
         public Command AddTask { get; }
-        string title;
-        string description;
+        private string title;
+        private string description;
 
         public TaskList taskList;
         public List<TaskData> allTasks;
@@ -24,7 +24,6 @@ namespace xamarin_notes_app.ViewModels
             get => title;
             set
             {
-                if (title == null) { return; }
                 title = value;
                 OnPropertyChanged(nameof(title));
             }
@@ -35,11 +34,13 @@ namespace xamarin_notes_app.ViewModels
             get => description;
             set
             {
-                if (description == null) { return; }
                 description = value;
                 OnPropertyChanged(nameof(description));
             }
         }
+
+        public bool IsEnabled => !string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(description);
+
         public AddTaskViewModel()
         {
             AddTask = new Command(async () => await AddTaskAsync());
@@ -48,37 +49,39 @@ namespace xamarin_notes_app.ViewModels
 
          async Task AddTaskAsync()
         {
-            Console.WriteLine("In add task commmand");
             IsLoading = true;
     
             try
             {
-                if (!string.IsNullOrEmpty(Title) && !string.IsNullOrEmpty(Description))
+                if (!string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(description))
                 {
-                    addTaskData.title = Title;
-                    addTaskData.description = Description;
-                    addTaskData.date = DateTime.Now.ToString();
+                    addTaskData = new TaskData(title, description, DateTime.Now.ToString());
 
-                    Console.WriteLine("To Add Data" + addTaskData);
-                    allTasks=await Utils.GetInstance.GetAllTasksAsync();
+                    /* allTasks =  Utils.GetInstance.GetAllTask();
+                     Console.WriteLine(" ## All tasks ##" + allTasks.Count.ToString());
 
-                    if (allTasks != null)
+                     if (allTasks != null && allTasks.Count > 0)
+                     {
+                         allTasks.Add(addTaskData);
+                         taskList.tasks = allTasks;
+                     }
+                     else
+                     {
+                         taskList.tasks.Add(addTaskData);
+                     }
+ */
+                     GetAllTask();
+                    allTasks = source;
+                    allTasks.Add(addTaskData);
+
+                    Console.WriteLine(allTasks);
+                    var newTaskList = new TaskList(allTasks);
+
+                    var newListResponse = await TaskListManager.AddTaskAsync(newTaskList);
+                    if (newListResponse != null)
                     {
-                        allTasks.Add(addTaskData);
-                        taskList.tasks = allTasks;
-                    }
-                    else
-                    {
-                        taskList.tasks.Add(addTaskData);
-                    }
-
-                    Console.WriteLine("task list from utils" + taskList.ToString());
-
-                    var newList = await TaskListManager.AddTaskAsync(taskList);
-                    if (newList != null)
-                    {
-                        allTasks = newList;
-                        Utils.GetInstance.SetAllTaskAsync(allTasks);
+                        allTasks = newListResponse;
+                        /*Utils.GetInstance.SetAllTask(allTasks);*/
 
                     }
 
@@ -86,14 +89,15 @@ namespace xamarin_notes_app.ViewModels
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert(Strings.taskAddFailure, "Please fill all the fields", "Ok");
+                    await Application.Current.MainPage.DisplayAlert(Strings.taskAddFailure, Strings.fillFields, "Ok");
                 }
                 
 
             }
-            catch
+            catch(Exception e)
             {
-                Console.WriteLine("AddTAsk View model: Failed to get credentials");
+                await Application.Current.MainPage.DisplayAlert(Strings.taskAddFailure, e.Message, "Ok");
+                Console.WriteLine("AddTAsk View model: Failed to get credentials" +e.Message);
                 
             }
 

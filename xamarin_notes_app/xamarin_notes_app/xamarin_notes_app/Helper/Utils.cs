@@ -10,7 +10,7 @@ namespace xamarin_notes_app.Helper
     {
         private static Utils instance = null;
         private static readonly object _lock = new object();
-        private static List<TaskData> _Tasks { get; set; }
+        private static List<TaskData> _Tasks = null;
         /*   public static List<TaskData> Tasks
            {
                get =>  _Tasks;
@@ -34,19 +34,9 @@ namespace xamarin_notes_app.Helper
                 return instance;
             }
         }
-        public async Task<List<TaskData>> GetAllTasksAsync()
-        {
-            try
-            {
-                return _Tasks ;
-            }
-            catch
-            {
-                return null; 
-            }
-        }
+        public  List<TaskData> GetAllTask() => _Tasks;
 
-        public async void SetAllTaskAsync(List<TaskData> list)
+        public  void SetAllTask(List<TaskData> list)
         {
             _Tasks = list;
         }

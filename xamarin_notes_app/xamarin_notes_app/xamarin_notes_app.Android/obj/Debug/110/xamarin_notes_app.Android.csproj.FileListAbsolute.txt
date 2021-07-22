@@ -1,5 +1,4 @@
-D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.Android.dll
-D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.Android.pdb
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\typemaps.x86.o
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\bin\Debug\xamarin_notes_app.Android.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\bin\Debug\xamarin_notes_app.Android.pdb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\bin\Debug\com.companyname.xamarin_notes_app.apk
@@ -200,6 +199,8 @@ D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Deb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Essentials.pdb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Core.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Core.pdb
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.Android.dll
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.Android.pdb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Xaml.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Xaml.pdb
@@ -561,7 +562,6 @@ D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Deb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\compressed_assemblies.x86_64.s
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\typemaps.arm64-v8a.o
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\typemaps.armeabi-v7a.o
-D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\typemaps.x86.o
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\typemaps.x86_64.o
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\environment.arm64-v8a.o
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\environment.armeabi-v7a.o

@@ -43,7 +43,7 @@
                        HorizontalOptions="Center"
                        FontSize="Large"  
                        />
-                <Label Text="{Binding ProfileData.taskCount}"
+                <Label Text="{Binding taskCount}"
                        Style="{StaticResource TaskCountStyle}"     
                        />
             </StackLayout>

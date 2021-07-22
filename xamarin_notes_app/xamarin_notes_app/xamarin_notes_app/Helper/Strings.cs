@@ -9,5 +9,6 @@ namespace xamarin_notes_app.Helper
         public const string getRequestFailed = "Unable to fetch data";
         public const string taskAddSuccess = "Task Successfully Added";
         public const string taskAddFailure = "Unable to add task";
+        public const string fillFields = "Please fill all the fields";
     }
 }

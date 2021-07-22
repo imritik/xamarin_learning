@@ -17,10 +17,10 @@ namespace xamarin_notes_app.Views {
     public partial class AddNewTask : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::xamarin_notes_app.Helper.CustomEntry.CustomEntry titleText;
+        private global::xamarin_notes_app.Helper.CustomEntry.CustomEntry Title;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::xamarin_notes_app.Helper.CustomEntry.CustomEntry descriptionText;
+        private global::xamarin_notes_app.Helper.CustomEntry.CustomEntry Description;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button taskSubmitBtn;
@@ -31,8 +31,8 @@ namespace xamarin_notes_app.Views {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AddNewTask));
-            titleText = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::xamarin_notes_app.Helper.CustomEntry.CustomEntry>(this, "titleText");
-            descriptionText = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::xamarin_notes_app.Helper.CustomEntry.CustomEntry>(this, "descriptionText");
+            Title = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::xamarin_notes_app.Helper.CustomEntry.CustomEntry>(this, "Title");
+            Description = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::xamarin_notes_app.Helper.CustomEntry.CustomEntry>(this, "Description");
             taskSubmitBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "taskSubmitBtn");
             activity = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "activity");
         }

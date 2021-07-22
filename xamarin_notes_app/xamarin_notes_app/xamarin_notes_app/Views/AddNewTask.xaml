@@ -12,7 +12,6 @@
             <Style x:Key="LabelTextStyle" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Center"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
                 <Setter Property="FontSize" Value="20" />
                 <Setter Property="TextColor" Value="Black"/>
                 <Setter Property="Margin" Value="15,15"/>
@@ -22,28 +21,30 @@
     
     <ContentPage.Content>
         <Grid>
-        <StackLayout Margin="40,40">
-            <Label 
-                Text="{StaticResource EnterTitle}"
-                Style="{StaticResource LabelTextStyle}"
-                />
-            <customRenderer:CustomEntry  x:Name="titleText" VerticalOptions="Start" 
-                                         Text="{Binding Title}" Placeholder="Enter title of task" Margin="0,5" HorizontalTextAlignment="Center"/>
-            <Label 
-                Text="{StaticResource EnterDescription}"
-                Style="{StaticResource LabelTextStyle}"
-                />
-            <customRenderer:CustomEntry  x:Name="descriptionText" VerticalOptions="Start"
-                                         Text="{Binding Description}" HeightRequest="100" Placeholder="Enter description of task" Margin="0,5"  HorizontalTextAlignment="Center"/>
-            <Button x:Name="taskSubmitBtn"
-                    BackgroundColor="Teal"
-                    TextColor="White"
-                    Font="Bold,16"
-                    Command="{Binding AddTask}"
-                    Margin="10,25"
-                    VerticalOptions="Center"
-                    Text="{StaticResource saveBtnText}"/>
-        </StackLayout>
+            <StackLayout Margin="40,40">
+                <Label 
+                    Text="{StaticResource EnterTitle}"
+                    Style="{StaticResource LabelTextStyle}"
+                    />
+             
+                <customRenderer:CustomEntry  x:Name="Title" VerticalOptions="Start" 
+                                             Text="{Binding Title,Mode=TwoWay}" Placeholder="Enter title of task" Margin="0,5"/>
+                <Label 
+                    Text="{StaticResource EnterDescription}"
+                    Style="{StaticResource LabelTextStyle}"
+                    />
+                <customRenderer:CustomEntry  x:Name="Description" VerticalOptions="Start"
+                                             Text="{Binding Description,Mode=TwoWay}" HeightRequest="100" Placeholder="Enter description of task" Margin="0,5" />
+                <Button x:Name="taskSubmitBtn"
+                        BackgroundColor="Teal"
+                        TextColor="White"
+                        Font="Bold,16"
+                        Command="{Binding AddTask}"
+                        Margin="10,25"
+                        IsEnabled="{Binding IsEnabled}"
+                        VerticalOptions="Center"
+                        Text="{StaticResource saveBtnText}"/>
+            </StackLayout>
             <ActivityIndicator x:Name="activity"  
                                IsRunning="{Binding IsLoading}"    
                                IsVisible="{Binding IsLoading}"  
