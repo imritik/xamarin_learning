@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using xamarin_notes_app.ViewModels;
 
 namespace xamarin_notes_app.Views
 {
@@ -15,6 +16,12 @@ namespace xamarin_notes_app.Views
         public AddNewTask()
         {
             InitializeComponent();
+            BindingContext = new AddTaskViewModel();
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            AddTaskViewModel addTaskViewModel = (AddTaskViewModel)BindingContext;
         }
     }
 }

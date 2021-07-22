@@ -17,8 +17,24 @@ namespace xamarin_notes_app.Views {
     public partial class AddNewTask : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::xamarin_notes_app.Helper.CustomEntry.CustomEntry titleText;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::xamarin_notes_app.Helper.CustomEntry.CustomEntry descriptionText;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Button taskSubmitBtn;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ActivityIndicator activity;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AddNewTask));
+            titleText = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::xamarin_notes_app.Helper.CustomEntry.CustomEntry>(this, "titleText");
+            descriptionText = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::xamarin_notes_app.Helper.CustomEntry.CustomEntry>(this, "descriptionText");
+            taskSubmitBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "taskSubmitBtn");
+            activity = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "activity");
         }
     }
 }

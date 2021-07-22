@@ -31,17 +31,17 @@ namespace xamarin_notes_app.Services
             }
             catch(Exception e)
             {
-                await Application.Current.MainPage.DisplayAlert("Error", e.Message, "Ok");
+               
                 return null;
             }
         }
 
-        public static async Task<string> PostDataAsync(string url,dynamic content)
+        public static async Task<string> PutDataAsync(string url,dynamic content)
         {
             try
             {
                 var data = JsonConvert.SerializeObject(content);
-                HttpResponseMessage response = await _client.PostAsync(url,data);
+                HttpResponseMessage response = await _client.PutAsync(url,data);
                 if (response.IsSuccessStatusCode)
                 {
                     return Strings.taskAddSuccess;
@@ -53,7 +53,7 @@ namespace xamarin_notes_app.Services
             }
             catch(Exception e)
             {
-                await Application.Current.MainPage.DisplayAlert("Error", e.Message, "Ok");
+               
                 return null;
             }
 

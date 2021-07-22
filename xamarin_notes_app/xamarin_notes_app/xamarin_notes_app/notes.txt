@@ -1,0 +1,8 @@
+
+1-Mvvm
+2-Rest api
+3-Collection view
+4-Grid view
+5-imageCircle plugin
+6-Bottom tab navigation
+7-CustomEntry Renderer

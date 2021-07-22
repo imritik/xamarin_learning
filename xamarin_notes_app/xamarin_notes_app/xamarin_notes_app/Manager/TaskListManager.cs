@@ -15,5 +15,11 @@ namespace xamarin_notes_app.Manager
             var data = await TaskListStore.GetTaskAsync(Constants.getTaskUrl);
             return data;
         }
+
+        public static async Task<List<TaskData>> AddTaskAsync(TaskList tasks)
+        {
+            var data = await TaskListStore.AddTaskAsync(Constants.postTaskUrl,tasks);
+            return data;
+        }
     }
 }

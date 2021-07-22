@@ -1,3 +1,5 @@
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.Android.dll
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.Android.pdb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\bin\Debug\xamarin_notes_app.Android.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\bin\Debug\xamarin_notes_app.Android.pdb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\bin\Debug\com.companyname.xamarin_notes_app.apk
@@ -198,8 +200,6 @@ D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Deb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Essentials.pdb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Core.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Core.pdb
-D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.Android.dll
-D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.Android.pdb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Xaml.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\Xamarin.Forms.Xaml.pdb
@@ -444,6 +444,7 @@ D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Deb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\src\crc643f46942d9dd1fff9\VisualElementTracker_AttachTracker.java
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\src\crc643f46942d9dd1fff9\WebViewRenderer.java
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\src\crc643f46942d9dd1fff9\WebViewRenderer_JavascriptResult.java
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\src\crc646e9bfdba620126a3\CustomEntryRenderer.java
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\src\crc646e9bfdba620126a3\MainActivity.java
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\src\crc64720bb2db43a66fe9\ButtonRenderer.java
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\src\crc64720bb2db43a66fe9\CarouselPageRenderer.java

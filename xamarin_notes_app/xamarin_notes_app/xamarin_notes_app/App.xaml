@@ -8,6 +8,9 @@
         <x:String x:Key="AllTaskScreenTitle">All Tasks</x:String>
         <x:String x:Key="TaskCountLabel">Total Task Logged</x:String>
         <x:String x:Key="NoTaskFound">No Tasks</x:String>
+        <x:String x:Key="EnterTitle">Enter Title</x:String>
+        <x:String x:Key="EnterDescription">Enter Description</x:String>
+        <x:String x:Key="saveBtnText">Save</x:String>
         <ResourceDictionary>
             
             <Style x:Key="userNameText" TargetType="Label">
