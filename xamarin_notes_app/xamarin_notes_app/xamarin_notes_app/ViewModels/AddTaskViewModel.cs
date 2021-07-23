@@ -15,8 +15,6 @@ namespace xamarin_notes_app.ViewModels
         public Command AddTask { get; }
         private string title;
         private string description;
-
-        public TaskList taskList;
         public List<TaskData> allTasks;
 
         public string Title
@@ -51,11 +49,11 @@ namespace xamarin_notes_app.ViewModels
 
         async Task AddTaskAsync()
         {
-            IsLoading = true;
-
+           
             try
             {
-                addTaskData = new TaskData(title, description, DateTime.Now.ToString("dd/mm/yyyy"));
+                IsLoading = true;
+                addTaskData = new TaskData(title, description, DateTime.Now.ToString("dd/MM/yyyy"));
                 GetAllTask();
                 allTasks = source;
                 allTasks.Add(addTaskData);
@@ -65,8 +63,6 @@ namespace xamarin_notes_app.ViewModels
                 if (newListResponse != null)
                 {
                     allTasks = newListResponse;
-                    /*Utils.GetInstance.SetAllTask(allTasks);*/
-
                     await Application.Current.MainPage.DisplayAlert(Strings.taskAddSuccess, addTaskData.title, "Ok");
                 }
                 else

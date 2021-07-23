@@ -24,6 +24,7 @@ namespace xamarin_notes_app.Views
             base.OnAppearing();
             ProfileViewModel profileViewModel = (ProfileViewModel)BindingContext;
             profileViewModel.getProfileData();
+            profileViewModel.GetAllTask();
         }
     }
 }

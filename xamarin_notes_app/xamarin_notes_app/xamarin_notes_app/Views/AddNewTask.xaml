@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:xamarin_notes_app.ViewModels" x:DataType="viewmodels:AddTaskViewModel"
              x:Class="xamarin_notes_app.Views.AddNewTask"
-             xmlns:customRenderer="clr-namespace:xamarin_notes_app.Helper.CustomEntry">
+             xmlns:customRenderer="clr-namespace:xamarin_notes_app.Helper.CustomEntry" xmlns:converter="clr-namespace:xamarin_notes_app.Helper.Converter">
 
     <NavigationPage.TitleView>
         <Label Text="{StaticResource AddTaskScreenTitle}" FontSize="30" TextColor="White" />
     </NavigationPage.TitleView>
     <ContentPage.Resources>
+        <converter:BoolToColorConverter x:Key="BoolToColorConverter"/>
         <ResourceDictionary>
             <Style x:Key="LabelTextStyle" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Center"/>
@@ -26,17 +27,17 @@
                     Text="{StaticResource EnterTitle}"
                     Style="{StaticResource LabelTextStyle}"
                     />
-             
-                <customRenderer:CustomEntry  x:Name="Title" VerticalOptions="Start" 
-                                             Text="{Binding Title,Mode=TwoWay}" Placeholder="Enter title of task" Margin="0,5"/>
+
+                <Entry x:Name="Title" VerticalOptions="Start" 
+                       Text="{Binding Title,Mode=TwoWay}" Placeholder="Enter title of task" Margin="0,5" BackgroundColor="White" />
                 <Label 
                     Text="{StaticResource EnterDescription}"
                     Style="{StaticResource LabelTextStyle}"
                     />
-                <customRenderer:CustomEntry  x:Name="Description"
-                                             Text="{Binding Description,Mode=TwoWay}" HeightRequest="100" Placeholder="Enter description of task" Margin="0,5" />
+                <Editor x:Name="Description" BackgroundColor="White" Text="{Binding Description,Mode=TwoWay}" HeightRequest="100" Placeholder="Enter description of task" Margin="0,5"/>
+                
                 <Button x:Name="taskSubmitBtn"
-                        BackgroundColor="Teal"
+                        BackgroundColor="{Binding IsEnabled,Converter={StaticResource BoolToColorConverter}}"
                         TextColor="White"
                         Font="Bold,16"
                         Command="{Binding AddTask}"

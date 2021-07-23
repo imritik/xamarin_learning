@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:xamarin_notes_app.ViewModels" 
              xmlns:model="clr-namespace:xamarin_notes_app.Models"
-             xmlns:views="clr-namespace:xamarin_notes_app.Views"
+             xmlns:views="clr-namespace:xamarin_notes_app.Views" xmlns:templates="clr-namespace:xamarin_notes_app.Helper.Templates"
              x:DataType="viewmodels:TaskListViewModel"
              x:Class="xamarin_notes_app.Views.TaskPage"   
              >
@@ -13,15 +13,7 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="FrameCardViewStyle" TargetType="Frame">
-                <Setter Property="CornerRadius" Value="2" />
-                <Setter Property="Margin" Value="5" />
-                <Setter Property="Padding" Value="5" />
-                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="OutlineColor" Value="LightGray" />
-                <Setter Property="BorderColor" Value="LightGray" />
-                <Setter Property="HasShadow" Value="True"/>
-            </Style>
+           
         </ResourceDictionary>
     </ContentPage.Resources>
     
@@ -38,48 +30,14 @@
 
             <CollectionView Grid.Column="1" ItemsSource="{Binding AllTask}">
                 <CollectionView.EmptyView>
-                    <Label Text="{StaticResource NoTaskFound}" FontSize="16" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                    <Label Text="{StaticResource NoTaskFound}" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                 </CollectionView.EmptyView>
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout VerticalItemSpacing="20" Span="1" Orientation="Vertical"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:TaskData">
-                        <Frame Style="{StaticResource FrameCardViewStyle}">
-                            <Grid Padding="5">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                                <Grid Grid.Row="0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="0.3*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Label Grid.Row="0"
-                                           Grid.Column="0"
-                                           HorizontalOptions="Start"
-                                           VerticalOptions="Center"
-                                           FontAttributes="Bold"
-                                           FontSize="20"
-                                           Text="{Binding title}"/>
-                                    <Label Grid.Row="0"
-                                           Grid.Column="1"
-                                           HorizontalOptions="Center"
-                                           VerticalOptions="Center"
-                                           FontSize="15"
-                                           Text="{Binding date}"/>
-                                </Grid>
-                                <BoxView Grid.Row="1"
-                                         HeightRequest="1"/>
-                                <Label Grid.Row="2"
-                                       HorizontalOptions="FillAndExpand"
-                                       VerticalOptions="Center"
-                                       FontSize="15"
-                                       Text="{Binding description}"/>
-                            </Grid>
-                        </Frame>
+                        <templates:CardViewTemplate/>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

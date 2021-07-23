@@ -14,8 +14,6 @@ namespace xamarin_notes_app.ViewModels
         public ProfileModel profileData;
 
         public ProfileModel ProfileData { get; set; }
-
-     /*   public int taskCount ;*/
        
         public ProfileViewModel()
         {
@@ -29,8 +27,6 @@ namespace xamarin_notes_app.ViewModels
             try
             {
                 profileData = await ProfileManager.GetProfileDataAsync();
-                GetAllTask();
-
             }
             catch (Exception e)
             {

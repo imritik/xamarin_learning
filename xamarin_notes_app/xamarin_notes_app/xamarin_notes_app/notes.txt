@@ -6,3 +6,5 @@
 5-imageCircle plugin
 6-Bottom tab navigation
 7-CustomEntry Renderer
+8-value converter
+9-CardView template
