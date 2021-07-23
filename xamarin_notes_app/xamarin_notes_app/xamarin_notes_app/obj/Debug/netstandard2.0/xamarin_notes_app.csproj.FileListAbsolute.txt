@@ -15,3 +15,4 @@ D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netst
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\xamarin_notes_app.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\ref\xamarin_notes_app.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\xamarin_notes_app.pdb
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\xamarin_notes_app.csproj.AssemblyReference.cache

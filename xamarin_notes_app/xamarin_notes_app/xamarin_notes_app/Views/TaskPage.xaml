@@ -29,9 +29,8 @@
             </Grid.ColumnDefinitions>
 
             <CollectionView Grid.Column="1" ItemsSource="{Binding AllTask}">
-                <CollectionView.EmptyView>
-                    <Label Text="{StaticResource NoTaskFound}" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-                </CollectionView.EmptyView>
+               
+
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout VerticalItemSpacing="20" Span="1" Orientation="Vertical"/>
                 </CollectionView.ItemsLayout>
@@ -40,6 +39,11 @@
                         <templates:CardViewTemplate/>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
+                <CollectionView.EmptyView>
+                    <StackLayout>
+                        <Label Text="{StaticResource NoTaskFound}" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </CollectionView.EmptyView>
             </CollectionView>
             <ActivityIndicator 
                 Grid.ColumnSpan="3"
@@ -49,6 +53,7 @@
                 Color="Blue"
                 VerticalOptions="CenterAndExpand"
                 BackgroundColor="Transparent"/>
+           
         </Grid>
      
     </ContentPage.Content>

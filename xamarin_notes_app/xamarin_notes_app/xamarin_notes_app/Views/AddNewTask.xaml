@@ -52,7 +52,7 @@
                                Color="Blue"  
                                VerticalOptions="Center"
                                HorizontalOptions="Center"
-                               BackgroundColor="Transparent"/>
+                               BackgroundColor="AliceBlue"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -23,7 +23,7 @@ namespace xamarin_notes_app.ViewModels
             set
             {
                 title = value;
-                OnPropertyChanged(nameof(title));
+                OnPropertyChanged(nameof(Title));
                 OnPropertyChanged(nameof(IsEnabled));
             }
         }
@@ -34,7 +34,7 @@ namespace xamarin_notes_app.ViewModels
             set
             {
                 description = value;
-                OnPropertyChanged(nameof(description));
+                OnPropertyChanged(nameof(Description));
                 OnPropertyChanged(nameof(IsEnabled));
             }
         }
@@ -49,10 +49,10 @@ namespace xamarin_notes_app.ViewModels
 
         async Task AddTaskAsync()
         {
-           
+            IsLoading = true;
             try
             {
-                IsLoading = true;
+
                 addTaskData = new TaskData(title, description, DateTime.Now.ToString("dd/MM/yyyy"));
                 GetAllTask();
                 allTasks = source;
@@ -64,6 +64,8 @@ namespace xamarin_notes_app.ViewModels
                 {
                     allTasks = newListResponse;
                     await Application.Current.MainPage.DisplayAlert(Strings.taskAddSuccess, addTaskData.title, "Ok");
+                    Title = "";
+                    Description = "";
                 }
                 else
                 {
