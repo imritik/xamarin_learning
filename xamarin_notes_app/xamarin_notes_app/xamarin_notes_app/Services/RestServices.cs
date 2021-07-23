@@ -12,8 +12,9 @@ namespace xamarin_notes_app.Services
     static class RestServices
     {
         private static HttpClient _client = new HttpClient();
+        static ApiExceptions apiExceptions = new ApiExceptions();
 
-        public static async Task<string> GetDataAsync(string url)
+        public static async Task<ActionResult> GetDataAsync(string url)
         {
             try
             {
@@ -21,22 +22,24 @@ namespace xamarin_notes_app.Services
                 if (response.IsSuccessStatusCode)
                 {
                     var data = await response.Content.ReadAsStringAsync();
-                    return data;
+
+                    return new ActionResult(data, null);
                 }
                 else
                 {
-                   
-                    return null;
+                    var errorMessage = apiExceptions.GetErrorMessage((int)response.StatusCode);
+                    return new ActionResult(null, errorMessage);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-               
-                return null;
+
+                /*return null;*/
+                return new ActionResult(null, e.Message);
             }
         }
 
-        public static async Task<string> PutDataAsync(string url,dynamic content)
+        public static async Task<ActionResult> PutDataAsync(string url, dynamic content)
         {
             try
             {
@@ -46,20 +49,46 @@ namespace xamarin_notes_app.Services
                 HttpResponseMessage response = await _client.PutAsync(url, reqObj);
                 if (response.IsSuccessStatusCode)
                 {
-                    return await response.Content.ReadAsStringAsync();
+                    var dataList= await response.Content.ReadAsStringAsync();
+                    return new ActionResult(dataList, null);
                 }
                 else
                 {
-                    return null;
+                    var errorMessage = apiExceptions.GetErrorMessage((int)response.StatusCode);
+                    return new ActionResult(null, errorMessage);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-               
-                return null;
+                return new ActionResult(null, e.Message);
             }
 
         }
+
+        /*  public static async Task<string> PutDataAsync(string url, dynamic content)
+          {
+              try
+              {
+                  var data = JsonConvert.SerializeObject(content);
+                  var reqObj = new StringContent(data, Encoding.UTF8, "application/json");
+
+                  HttpResponseMessage response = await _client.PutAsync(url, reqObj);
+                  if (response.IsSuccessStatusCode)
+                  {
+                      return await response.Content.ReadAsStringAsync();
+                  }
+                  else
+                  {
+                      return null;
+                  }
+              }
+              catch (Exception e)
+              {
+
+                  return null;
+              }
+
+          }*/
 
     }
 }

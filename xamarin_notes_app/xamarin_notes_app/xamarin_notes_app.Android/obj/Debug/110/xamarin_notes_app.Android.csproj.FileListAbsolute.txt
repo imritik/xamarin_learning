@@ -1,3 +1,5 @@
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\System.Data.dll
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\machine.config
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\bin\Debug\xamarin_notes_app.Android.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\bin\Debug\xamarin_notes_app.Android.pdb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\bin\Debug\com.companyname.xamarin_notes_app.apk
@@ -79,7 +81,6 @@ D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Deb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\System.Core.pdb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\System.Data.DataSetExtensions.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\System.Data.DataSetExtensions.pdb
-D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\System.Data.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\System.Data.pdb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\System.dll
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\System.Drawing.Common.dll
@@ -220,7 +221,6 @@ D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Deb
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\AndroidManifest.xml
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\__environment__.txt
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\src\mono\MonoRuntimeProvider.java
-D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\assets\machine.config
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\android\bin\mono.android.jar
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\static.flag
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app.Android\obj\Debug\110\buildid.txt

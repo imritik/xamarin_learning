@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using xamarin_notes_app.Helper;
 using xamarin_notes_app.Models;
 using xamarin_notes_app.Services;
 
@@ -10,54 +11,93 @@ namespace xamarin_notes_app.Store
 {
     class TaskListStore
     {
-        public static async Task<List<TaskData>> GetTaskAsync(string url)
+        public static async Task<ActionResult> GetTaskAsync(string url)
         {
-            try
-            {
-                string response = await RestServices.GetDataAsync(url);
-                if (response != null)
-                {
-                    var taskList = JsonConvert.DeserializeObject<TaskList>(response);
+            var response = await RestServices.GetDataAsync(url);
 
-                    return taskList.tasks;
-                }
-                else
-                {
-                    Console.WriteLine("Task Store:Failed to get tasks");
-                    return null;
-                }
-            }
-            catch(Exception e)
+            if (response.Data != null)
             {
-                Console.WriteLine(e.Message);
-                return null;
+                try
+                {
+                    var taskList = JsonConvert.DeserializeObject<TaskList>(response.Data);
+                    return new ActionResult(taskList.tasks, null);
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    return new ActionResult(null, e.Message);
+                }
             }
+            else
+            {
+                return new ActionResult(null, response.Error);
+            }
+            /*string response = await RestServices.GetDataAsync(url);
+            if (response != null)
+            {
+                var taskList = JsonConvert.DeserializeObject<TaskList>(response);
+
+                return taskList.tasks;
+            }
+            else
+            {
+                Console.WriteLine("Task Store:Failed to get tasks");
+                return null;
+            }*/
 
         }
 
-        public static async Task<List<TaskData>> AddTaskAsync(string url,TaskList tasks)
+
+        public static async Task<ActionResult> AddTaskAsync(string url, TaskList tasks)
 
         {
-            Console.WriteLine("in store==" + tasks.tasks.Count);
-            try
+            var response = await RestServices.PutDataAsync(url, tasks);
+            if (response.Data != null)
             {
-                string response = await RestServices.PutDataAsync(url, tasks);
-                if (response != null)
+                try
                 {
-                    var taskList = JsonConvert.DeserializeObject<TaskList>(response);
-                    return taskList.tasks;
+                    var taskList = JsonConvert.DeserializeObject<TaskList>(response.Data);
+                    return new ActionResult(taskList.tasks, null);
                 }
-                else
+
+
+                catch (Exception e)
                 {
-                    Console.WriteLine("Task Store:Failed to get tasks");
-                    return null;
+                    Console.WriteLine(e.Message);
+                    return new ActionResult(null, e.Message);
                 }
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine(e.Message);
-                return null;
+                Console.WriteLine("Task Store:Failed to get tasks");
+                return new ActionResult(null, response.Error);
             }
         }
+
+        /*  public static async Task<List<TaskData>> AddTaskAsync(string url, TaskList tasks)
+
+          {
+              Console.WriteLine("in store==" + tasks.tasks.Count);
+              try
+              {
+                  string response = await RestServices.PutDataAsync(url, tasks);
+                  if (response != null)
+                  {
+                      var taskList = JsonConvert.DeserializeObject<TaskList>(response);
+                      return taskList.tasks;
+                  }
+                  else
+                  {
+                      Console.WriteLine("Task Store:Failed to get tasks");
+                      return null;
+                  }
+              }
+              catch (Exception e)
+              {
+                  Console.WriteLine(e.Message);
+                  return null;
+              }
+          }*/
     }
 }

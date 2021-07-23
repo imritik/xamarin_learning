@@ -5,6 +5,7 @@ D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\bin\Debug\netst
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\App.xaml.g.cs
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\Helper\Templates\CardViewTemplate.xaml.g.cs
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\Views\AddNewTask.xaml.g.cs
+D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\Views\CustomCardView.xaml.g.cs
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\Views\ProfilePage.xaml.g.cs
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\Views\TabBarPage.xaml.g.cs
 D:\xamarin\xamarin_notes_app\xamarin_notes_app\xamarin_notes_app\obj\Debug\netstandard2.0\Views\TaskPage.xaml.g.cs

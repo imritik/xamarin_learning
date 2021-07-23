@@ -15,6 +15,7 @@ namespace xamarin_notes_app.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public static List<TaskData> source;
+        public static int taskCounter { get; set; }
 
         public ObservableCollection<TaskData> AllTask { get; private set; }
         public BaseViewModel()
@@ -41,12 +42,19 @@ namespace xamarin_notes_app.ViewModels
 
             try
             {
-                source = await TaskListManager.GetTasksAsync();
-                foreach (TaskData task in source)
+                var response = await TaskListManager.GetTasksAsync();
+                if (response.Data != null)
                 {
-                    task.creationDate = DateTime.ParseExact(task.date, "dd/MM/yyyy", null);
+                    source = response.Data;
+                    foreach (TaskData task in source)
+                    {
+                        task.creationDate = DateTime.ParseExact(task.date, "dd/MM/yyyy", null);
+                    }
                 }
-
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", response.Error, "Ok");
+                }
             }
             catch (Exception e)
             {
@@ -56,8 +64,11 @@ namespace xamarin_notes_app.ViewModels
             {
                 List<TaskData> sortedList = source.OrderByDescending(s => s.creationDate).ToList();
                 AllTask = new ObservableCollection<TaskData>(sortedList);
+                source = sortedList;
+                taskCounter = source.Count;
                 OnPropertyChanged(nameof(AllTask));
                 OnPropertyChanged(nameof(source));
+                OnPropertyChanged(nameof(taskCounter));
                 IsLoading = false;
             }
         }
