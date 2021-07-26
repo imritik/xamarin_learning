@@ -61,5 +61,15 @@ namespace xamarin_notes_app.Store
                 return new ActionResult(null, response.Error);
             }
         }
+
+        public static void InsertTasksToDBAsync(List<TaskData> list)
+        {
+            DatabaseService<TaskData>.GetDatabaseService.InsertAllDataAsync(list);
+        }
+
+        public static async Task<List<TaskData>> GetTasksFromDBAsync()
+        {
+            return await DatabaseService<TaskData>.GetDatabaseService.GetAllDataFromDBAsync();
+        }
     }
 }

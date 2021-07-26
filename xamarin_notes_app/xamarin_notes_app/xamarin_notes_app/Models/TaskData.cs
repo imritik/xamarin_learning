@@ -17,5 +17,9 @@ namespace xamarin_notes_app.Models
             description = Description;
             date = Date;
         }
+        public TaskData()
+        {
+
+        }
     }
 }

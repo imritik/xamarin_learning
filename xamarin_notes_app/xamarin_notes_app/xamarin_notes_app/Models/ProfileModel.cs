@@ -16,5 +16,8 @@ namespace xamarin_notes_app.Models
             imageURL = url;
 
         }
-    }
+        public ProfileModel()
+        {
+
+        }
 }
