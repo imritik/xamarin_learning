@@ -6,6 +6,7 @@ using System.Text;
 using Xamarin.Forms;
 using xamarin_notes_app.Models;
 using xamarin_notes_app.Manager;
+using xamarin_notes_app.Helper;
 
 namespace xamarin_notes_app.ViewModels
 {
@@ -14,10 +15,11 @@ namespace xamarin_notes_app.ViewModels
         public ProfileModel profileData;
 
         public ProfileModel ProfileData { get; set; }
-       
+        
+
         public ProfileViewModel()
         {
-           
+          
         }
 
         /*   public async void getProfileData()
@@ -45,7 +47,6 @@ namespace xamarin_notes_app.ViewModels
         public async void getProfileData()
         {
             IsLoading = true;
-
             try
             {
                 var response = await ProfileManager.GetProfileDataAsync();

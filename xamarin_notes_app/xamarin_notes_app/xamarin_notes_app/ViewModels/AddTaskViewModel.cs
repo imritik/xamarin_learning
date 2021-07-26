@@ -53,7 +53,14 @@ namespace xamarin_notes_app.ViewModels
             {
 
                 addTaskData = new TaskData(title, description, DateTime.Now.ToString("dd/MM/yyyy"));
-                GetAllTask();
+                if(Utils.GetInstance.GetAllTask().Count>0)
+                {
+                    source = Utils.GetInstance.GetAllTask();
+                }
+                else
+                {
+                    GetAllTask();
+                }
                 allTasks = source;
                 allTasks.Add(addTaskData);
                 var newTaskList = new TaskList(allTasks);
@@ -65,6 +72,7 @@ namespace xamarin_notes_app.ViewModels
                     await Application.Current.MainPage.DisplayAlert(Strings.taskAddSuccess, addTaskData.title, "Ok");
                     Title = "";
                     Description = "";
+                    GetAllTask();
                 }
                 else
                 {

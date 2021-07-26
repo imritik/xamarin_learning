@@ -8,3 +8,5 @@
 7-CustomEntry Renderer
 8-value converter
 9-CardView template
+10-Singleton class
+11-

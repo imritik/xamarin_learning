@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using xamarin_notes_app.Helper;
 using xamarin_notes_app.Views;
 
 namespace xamarin_notes_app
@@ -10,7 +11,6 @@ namespace xamarin_notes_app
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new TabBarPage());
         }
 

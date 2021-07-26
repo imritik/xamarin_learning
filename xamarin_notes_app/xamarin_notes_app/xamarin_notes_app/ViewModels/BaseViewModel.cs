@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Xamarin.Forms;
+using xamarin_notes_app.Helper;
 using xamarin_notes_app.Manager;
 using xamarin_notes_app.Models;
 
@@ -15,7 +16,9 @@ namespace xamarin_notes_app.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public static List<TaskData> source;
-        public static int taskCounter { get; set; }
+        public int taskCounter { get; set; }
+
+        Utils utils = Utils.GetInstance;
 
         public ObservableCollection<TaskData> AllTask { get; private set; }
         public BaseViewModel()
@@ -42,18 +45,28 @@ namespace xamarin_notes_app.ViewModels
 
             try
             {
-                var response = await TaskListManager.GetTasksAsync();
-                if (response.Data != null)
+                //check in the shared instance
+                var utilsData = utils.GetAllTask();
+                if (utilsData != null)
                 {
-                    source = response.Data;
-                    foreach (TaskData task in source)
-                    {
-                        task.creationDate = DateTime.ParseExact(task.date, "dd/MM/yyyy", null);
-                    }
+                    source = utilsData;
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", response.Error, "Ok");
+                    //fetch from api
+                    var response = await TaskListManager.GetTasksAsync();
+                    if (response.Data != null)
+                    {
+                        source = response.Data;
+                    }
+                    else
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error", response.Error, "Ok");
+                    }
+                }
+                foreach (TaskData task in source)
+                {
+                    task.creationDate = DateTime.ParseExact(task.date, "dd/MM/yyyy", null);
                 }
             }
             catch (Exception e)
@@ -65,6 +78,7 @@ namespace xamarin_notes_app.ViewModels
                 List<TaskData> sortedList = source.OrderByDescending(s => s.creationDate).ToList();
                 AllTask = new ObservableCollection<TaskData>(sortedList);
                 source = sortedList;
+                utils.SetAllTask(source);
                 taskCounter = source.Count;
                 OnPropertyChanged(nameof(AllTask));
                 OnPropertyChanged(nameof(source));
