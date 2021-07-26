@@ -33,19 +33,6 @@ namespace xamarin_notes_app.Store
             {
                 return new ActionResult(null, response.Error);
             }
-            /*string response = await RestServices.GetDataAsync(url);
-            if (response != null)
-            {
-                var taskList = JsonConvert.DeserializeObject<TaskList>(response);
-
-                return taskList.tasks;
-            }
-            else
-            {
-                Console.WriteLine("Task Store:Failed to get tasks");
-                return null;
-            }*/
-
         }
 
 
@@ -74,30 +61,5 @@ namespace xamarin_notes_app.Store
                 return new ActionResult(null, response.Error);
             }
         }
-
-        /*  public static async Task<List<TaskData>> AddTaskAsync(string url, TaskList tasks)
-
-          {
-              Console.WriteLine("in store==" + tasks.tasks.Count);
-              try
-              {
-                  string response = await RestServices.PutDataAsync(url, tasks);
-                  if (response != null)
-                  {
-                      var taskList = JsonConvert.DeserializeObject<TaskList>(response);
-                      return taskList.tasks;
-                  }
-                  else
-                  {
-                      Console.WriteLine("Task Store:Failed to get tasks");
-                      return null;
-                  }
-              }
-              catch (Exception e)
-              {
-                  Console.WriteLine(e.Message);
-                  return null;
-              }
-          }*/
     }
 }

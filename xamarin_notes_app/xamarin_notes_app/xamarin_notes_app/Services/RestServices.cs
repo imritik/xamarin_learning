@@ -64,31 +64,5 @@ namespace xamarin_notes_app.Services
             }
 
         }
-
-        /*  public static async Task<string> PutDataAsync(string url, dynamic content)
-          {
-              try
-              {
-                  var data = JsonConvert.SerializeObject(content);
-                  var reqObj = new StringContent(data, Encoding.UTF8, "application/json");
-
-                  HttpResponseMessage response = await _client.PutAsync(url, reqObj);
-                  if (response.IsSuccessStatusCode)
-                  {
-                      return await response.Content.ReadAsStringAsync();
-                  }
-                  else
-                  {
-                      return null;
-                  }
-              }
-              catch (Exception e)
-              {
-
-                  return null;
-              }
-
-          }*/
-
     }
 }

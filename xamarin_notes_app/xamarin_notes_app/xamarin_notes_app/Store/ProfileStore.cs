@@ -11,33 +11,7 @@ namespace xamarin_notes_app.Store
 {
     class ProfileStore
     {
-        /*    public static async Task<ProfileModel> GetProfileDataAsync(string url)
-            {
-                try
-                {
-                    string response = await RestServices.GetDataAsync(url);
-                    if (response != null)
-                    {
-                            var profile = JsonConvert.DeserializeObject<ProfileModel>(response);
-                            return profile;
-
-                    }
-                    else
-                    {
-                        Console.WriteLine("Profile Store:Failed to get profile");
-                        return null;
-                    }
-
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                    return null;
-                }
-            }
-        }*/
-
-        public static async Task<ActionResult> GetProfileDataAsync(string url)
+     public static async Task<ActionResult> GetProfileDataAsync(string url)
         {
             var response = await RestServices.GetDataAsync(url);
             if (response.Data != null)

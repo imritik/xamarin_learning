@@ -86,7 +86,6 @@ namespace xamarin_notes_app.ViewModels
                 IsLoading = false;
             }
         }
-
         public void OnPropertyChanged([CallerMemberName] string name = null) =>
            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 

@@ -10,13 +10,7 @@ namespace xamarin_notes_app.Manager
 {
    class ProfileManager
     {
-        /* public static async Task<ProfileModel> GetProfileDataAsync()
-         {
-             var data = await ProfileStore.GetProfileDataAsync(Constants.getProfileUrl);
-                 return data;  
-         }*/
-
-        public static async Task<ActionResult> GetProfileDataAsync()
+      public static async Task<ActionResult> GetProfileDataAsync()
         {
             var response = await ProfileStore.GetProfileDataAsync(Constants.getProfileUrl);
             if (response.Data != null)

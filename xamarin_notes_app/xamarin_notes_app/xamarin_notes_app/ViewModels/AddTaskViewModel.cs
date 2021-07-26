@@ -51,7 +51,6 @@ namespace xamarin_notes_app.ViewModels
             IsLoading = true;
             try
             {
-
                 addTaskData = new TaskData(title, description, DateTime.Now.ToString("dd/MM/yyyy"));
                 if(Utils.GetInstance.GetAllTask().Count>0)
                 {
@@ -89,41 +88,5 @@ namespace xamarin_notes_app.ViewModels
             IsLoading = false;
 
         }
-
-        /*    async Task AddTaskAsync()
-            {
-                IsLoading = true;
-                try
-                {
-
-                    addTaskData = new TaskData(title, description, DateTime.Now.ToString("dd/MM/yyyy"));
-                    GetAllTask();
-                    allTasks = source;
-                    allTasks.Add(addTaskData);
-                    var newTaskList = new TaskList(allTasks);
-
-                    var newListResponse = await TaskListManager.AddTaskAsync(newTaskList);
-                    if (newListResponse != null)
-                    {
-                        allTasks = newListResponse;
-                        await Application.Current.MainPage.DisplayAlert(Strings.taskAddSuccess, addTaskData.title, "Ok");
-                        Title = "";
-                        Description = "";
-                    }
-                    else
-                    {
-                        await Application.Current.MainPage.DisplayAlert(Strings.taskAddFailure, "", "Ok");
-                    }
-                }
-                catch (Exception e)
-                {
-                    await Application.Current.MainPage.DisplayAlert(Strings.taskAddFailure, e.Message, "Ok");
-                    Console.WriteLine("AddTAsk View model: " + e.Message);
-                }
-
-
-                IsLoading = false;
-
-            }*/
     }
 }

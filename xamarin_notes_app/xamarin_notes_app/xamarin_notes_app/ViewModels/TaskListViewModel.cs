@@ -12,7 +12,6 @@ namespace xamarin_notes_app.ViewModels
 {
     class TaskListViewModel : BaseViewModel
     {
-
         public TaskListViewModel()
         {
 

@@ -10,12 +10,6 @@ namespace xamarin_notes_app.Manager
 {
     class TaskListManager
     {
-        /*public static async Task<List<TaskData>> GetTasksAsync()
-        {
-            var data = await TaskListStore.GetTaskAsync(Constants.getTaskUrl);
-            return data;
-        }*/
-
         public static async Task<ActionResult> GetTasksAsync()
         {
             var response = await TaskListStore.GetTaskAsync(Constants.getTaskUrl);
@@ -41,11 +35,5 @@ namespace xamarin_notes_app.Manager
                 return new ActionResult(null, response.Error);
             }
         }
-
-        /* public static async Task<List<TaskData>> AddTaskAsync(TaskList tasks)
-         {
-             var data = await TaskListStore.AddTaskAsync(Constants.postTaskUrl,tasks);
-             return data;
-         }*/
     }
 }
