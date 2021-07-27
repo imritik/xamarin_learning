@@ -51,6 +51,7 @@ namespace xamarin_notes_app.Services
             try
             {
                 return await _database.Table<T>().ToListAsync();
+
             }
             catch (Exception e)
             {

@@ -14,6 +14,7 @@ namespace xamarin_notes_app.Helper
         }
         public static Utils instance = new Utils();
         public static List<TaskData> Tasks = null;
+        public static ProfileModel Profile = null;
 
         public static Utils GetInstance
         {
@@ -27,6 +28,12 @@ namespace xamarin_notes_app.Helper
         public void SetAllTask(List<TaskData> list)
         {
             Tasks = list;
+        }
+
+        public ProfileModel GetProfile() => Profile;
+        public void SetProfileData(ProfileModel profile)
+        {
+            Profile = profile;
         }
     }
 }

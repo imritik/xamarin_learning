@@ -22,7 +22,6 @@ namespace xamarin_notes_app.Services
                 if (response.IsSuccessStatusCode)
                 {
                     var data = await response.Content.ReadAsStringAsync();
-
                     return new ActionResult(data, null);
                 }
                 else
@@ -33,7 +32,6 @@ namespace xamarin_notes_app.Services
             }
             catch (Exception e)
             {
-
                 /*return null;*/
                 return new ActionResult(null, e.Message);
             }

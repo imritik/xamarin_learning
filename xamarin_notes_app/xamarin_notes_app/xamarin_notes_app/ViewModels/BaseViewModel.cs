@@ -18,8 +18,6 @@ namespace xamarin_notes_app.ViewModels
         public static List<TaskData> source;
         public int taskCounter { get; set; }
 
-        Utils utils = Utils.GetInstance;
-
         public ObservableCollection<TaskData> AllTask { get; private set; }
         public BaseViewModel()
         {
@@ -45,24 +43,15 @@ namespace xamarin_notes_app.ViewModels
 
             try
             {
-                //check in the shared instance
-                var utilsData = utils.GetAllTask();
-                if (utilsData != null)
+                var response = await TaskListManager.GetTasksAsync();
+                if (response.Data != null)
                 {
-                    source = utilsData;
+                    source = response.Data;
                 }
                 else
                 {
-                    //fetch from api
-                    var response = await TaskListManager.GetTasksAsync();
-                    if (response.Data != null)
-                    {
-                        source = response.Data;
-                    }
-                    else
-                    {
-                        await Application.Current.MainPage.DisplayAlert("Error", response.Error, "Ok");
-                    }
+                    Console.WriteLine("base view model 1");
+                    await Application.Current.MainPage.DisplayAlert("Error", response.Error, "Ok");
                 }
                 foreach (TaskData task in source)
                 {
@@ -71,6 +60,7 @@ namespace xamarin_notes_app.ViewModels
             }
             catch (Exception e)
             {
+                Console.WriteLine("base view model 2");
                 await Application.Current.MainPage.DisplayAlert("Error!", e.Message, "OK");
             }
             if (source != null)
@@ -78,7 +68,6 @@ namespace xamarin_notes_app.ViewModels
                 List<TaskData> sortedList = source.OrderByDescending(s => s.creationDate).ToList();
                 AllTask = new ObservableCollection<TaskData>(sortedList);
                 source = sortedList;
-                utils.SetAllTask(source);
                 taskCounter = source.Count;
                 OnPropertyChanged(nameof(AllTask));
                 OnPropertyChanged(nameof(source));

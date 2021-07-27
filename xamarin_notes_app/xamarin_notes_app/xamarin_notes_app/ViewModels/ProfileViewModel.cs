@@ -34,11 +34,13 @@ namespace xamarin_notes_app.ViewModels
                 }
                 else
                 {
+                    Console.WriteLine("Profile view model 1");
                     await Application.Current.MainPage.DisplayAlert("Error!", response.Error, "OK");
                 }
             }
             catch (Exception e)
             {
+                Console.WriteLine("Profile view model 2");
                 await Application.Current.MainPage.DisplayAlert("Error!", e.Message, "OK");
             }
             if (profileData == null)

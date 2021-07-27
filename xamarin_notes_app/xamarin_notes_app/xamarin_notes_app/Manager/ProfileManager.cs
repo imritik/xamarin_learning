@@ -8,19 +8,54 @@ using xamarin_notes_app.Store;
 
 namespace xamarin_notes_app.Manager
 {
-   class ProfileManager
+    class ProfileManager
     {
-      public static async Task<ActionResult> GetProfileDataAsync()
+
+        public static async Task<ActionResult> GetProfileDataAsync()
         {
-            var response = await ProfileStore.GetProfileDataAsync(Constants.getProfileUrl);
-            if (response.Data != null)
+            /*Check in shared instance ->
+            * Check in local db ->
+            * Rest Service*/
+
+            //instance
+            Utils utils = Utils.GetInstance;
+            var source = utils.GetProfile();
+            if (source == null)
             {
-                return new ActionResult(response.Data, null);
+                //local db
+                /*source = await ProfileStore.GetProfileFromDBAsync();
+                if (source == null)
+                {*/
+                //rest api
+                var response = await ProfileStore.GetProfileDataAsync(Constants.getProfileUrl);
+                if (response.Data != null)
+                {
+                    source = response.Data;
+                    utils.SetProfileData(response.Data);
+                    /*ProfileStore.InsertProfileToDBAsync(response.Data);*/
+                }
+                else
+                {
+                    return new ActionResult(null, response.Error);
+                }
+                /* }*/
             }
-            else
-            {
-                return new ActionResult(null, response.Error);
-            }
+            return new ActionResult(source, null);
         }
+
+
+
+        /*  public static async Task<ActionResult> GetProfileDataAsync()
+          {
+              var response = await ProfileStore.GetProfileDataAsync(Constants.getProfileUrl);
+              if (response.Data != null)
+              {
+                  return new ActionResult(response.Data, null);
+              }
+              else
+              {
+                  return new ActionResult(null, response.Error);
+              }
+          }*/
     }
 }
